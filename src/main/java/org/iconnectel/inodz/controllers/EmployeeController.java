@@ -1,9 +1,5 @@
 package org.iconnectel.inodz.controllers;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.iconnectel.dto.UserDetails;
 import org.iconnectel.inodz.models.Employee;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,8 +20,9 @@ public class EmployeeController {
 		Employee employee = new Employee(id, "Jeewan");
 		model.addAttribute("emp3", employee);
 
-		try {
-			UserDetails userDetails = new UserDetails();
+		// to store data inside the database
+/*		try {
+			EmployeeDTO userDetails = new EmployeeDTO();
 			userDetails.setUserId(1);
 			userDetails.setUserName("First User");
 
@@ -36,7 +33,7 @@ public class EmployeeController {
 			session.getTransaction().commit();
 		}catch (Exception ex) {
 			System.out.println("ERROR :: " + ex);
-		}
+		}*/
 
 
 
